@@ -1,0 +1,110 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f0f2f5; /* Fondo sólido claro */
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #333; /* Color del título */
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.card {
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border: none;
+  transition: all 0.3s ease-in-out;
+  background-color: #ffffff; /* Fondo blanco */
+  max-width: 1200px;
+  width: 100%;
+  padding: 20px;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.card .card-body {
+  padding: 1.5rem;
+  background-color: #f7f9fc; /* Fondo claro para el cuerpo de la tarjeta */
+  color: #333; /* Texto en color oscuro */
+  border-radius: 8px;
+}
+
+.module-btn {
+  background-color: #007bff;
+  color: white;
+  border-radius: 8px;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: background-color 0.3s, transform 0.3s;
+  height: 150px;
+  font-size: 1.25rem; /* Aumenta el tamaño de la letra */
+}
+
+.module-btn img {
+  margin-right: 10px;
+  width: 32px;
+  height: 32px; /* Aumenta el tamaño del ícono */
+}
+
+.module-btn:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: space-between;
+  margin: 0;
+}
+
+.col-md-4 {
+  flex: 1;
+  min-width: 280px; /* Ajuste mínimo de ancho para asegurar que se mantengan en fila */
+  max-width: 31%;
+}
+
+@media (max-width: 768px) {
+  .col-md-4 {
+    max-width: 48%;
+  }
+
+  h1 {
+    font-size: 2rem; /* Ajuste de tamaño para pantallas más pequeñas */
+  }
+}
+
+@media (max-width: 576px) {
+  .col-md-4 {
+    max-width: 100%;
+  }
+
+  h1 {
+    font-size: 1.75rem; /* Ajuste de tamaño para pantallas más pequeñas */
+  }
+
+  .module-btn {
+    font-size: 1rem; /* Ajuste de tamaño del texto para pantallas más pequeñas */
+  }
+
+  .module-btn img {
+    width: 28px;
+    height: 28px; /* Ajuste del tamaño del ícono para pantallas más pequeñas */
+  }
+}

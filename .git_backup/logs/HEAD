@@ -1,0 +1,34 @@
+0000000000000000000000000000000000000000 7b6d3fa834d397b5d9f8e15ca23ebb288f27c367 programmingsandi <programmingsandi@gmail.com> 1721957507 -0500	commit (initial): Inicializar rama desarrollo con README
+7b6d3fa834d397b5d9f8e15ca23ebb288f27c367 7b6d3fa834d397b5d9f8e15ca23ebb288f27c367 programmingsandi <programmingsandi@gmail.com> 1721957687 -0500	checkout: moving from desarrollo to desarrollo
+7b6d3fa834d397b5d9f8e15ca23ebb288f27c367 7b6d3fa834d397b5d9f8e15ca23ebb288f27c367 programmingsandi <programmingsandi@gmail.com> 1721957687 -0500	checkout: moving from desarrollo to bd
+7b6d3fa834d397b5d9f8e15ca23ebb288f27c367 7b6d3fa834d397b5d9f8e15ca23ebb288f27c367 programmingsandi <programmingsandi@gmail.com> 1721957689 -0500	checkout: moving from bd to desarrollo
+7b6d3fa834d397b5d9f8e15ca23ebb288f27c367 7b6d3fa834d397b5d9f8e15ca23ebb288f27c367 programmingsandi <programmingsandi@gmail.com> 1721957690 -0500	checkout: moving from desarrollo to backend
+7b6d3fa834d397b5d9f8e15ca23ebb288f27c367 7b6d3fa834d397b5d9f8e15ca23ebb288f27c367 programmingsandi <programmingsandi@gmail.com> 1721957695 -0500	checkout: moving from backend to desarrollo
+7b6d3fa834d397b5d9f8e15ca23ebb288f27c367 7b6d3fa834d397b5d9f8e15ca23ebb288f27c367 programmingsandi <programmingsandi@gmail.com> 1721957695 -0500	checkout: moving from desarrollo to frontend
+7b6d3fa834d397b5d9f8e15ca23ebb288f27c367 7b6d3fa834d397b5d9f8e15ca23ebb288f27c367 programmingsandi <programmingsandi@gmail.com> 1721957703 -0500	checkout: moving from frontend to desarrollo
+7b6d3fa834d397b5d9f8e15ca23ebb288f27c367 7b6d3fa834d397b5d9f8e15ca23ebb288f27c367 programmingsandi <programmingsandi@gmail.com> 1721957704 -0500	checkout: moving from desarrollo to release-v1
+7b6d3fa834d397b5d9f8e15ca23ebb288f27c367 c9d1ccee2894d58bfb0dd8f174293304d3311b56 programmingsandi <programmingsandi@gmail.com> 1721957801 -0500	commit: primer commit
+c9d1ccee2894d58bfb0dd8f174293304d3311b56 0000000000000000000000000000000000000000 programmingsandi <programmingsandi@gmail.com> 1721957801 -0500	Branch: renamed refs/heads/release-v1 to refs/heads/main
+0000000000000000000000000000000000000000 c9d1ccee2894d58bfb0dd8f174293304d3311b56 programmingsandi <programmingsandi@gmail.com> 1721957801 -0500	Branch: renamed refs/heads/release-v1 to refs/heads/main
+c9d1ccee2894d58bfb0dd8f174293304d3311b56 7b6d3fa834d397b5d9f8e15ca23ebb288f27c367 programmingsandi <programmingsandi@gmail.com> 1721958719 -0500	checkout: moving from main to bd
+7b6d3fa834d397b5d9f8e15ca23ebb288f27c367 fa28d8c5f79bcfcefe3eed90642789af3fac894d programmingsandi <programmingsandi@gmail.com> 1721958843 -0500	commit: Agregar archivo Basededatosdocente.sql a la rama bd
+fa28d8c5f79bcfcefe3eed90642789af3fac894d 7b6d3fa834d397b5d9f8e15ca23ebb288f27c367 programmingsandi <programmingsandi@gmail.com> 1721943522 -0500	checkout: moving from bd to backend
+7b6d3fa834d397b5d9f8e15ca23ebb288f27c367 b976eb3fcf5595e62eb68c71eb68709b81aee55b programmingsandi <programmingsandi@gmail.com> 1721943598 -0500	commit: Agregar código del backend a la rama backend
+b976eb3fcf5595e62eb68c71eb68709b81aee55b 7b6d3fa834d397b5d9f8e15ca23ebb288f27c367 programmingsandi <programmingsandi@gmail.com> 1721943681 -0500	checkout: moving from backend to frontend
+7b6d3fa834d397b5d9f8e15ca23ebb288f27c367 7df310271dce615092a3ed689f7ed77116a09f38 programmingsandi <programmingsandi@gmail.com> 1721943775 -0500	commit: Agregar index HTML a la rama frontend
+7df310271dce615092a3ed689f7ed77116a09f38 7df310271dce615092a3ed689f7ed77116a09f38 programmingsandi <programmingsandi@gmail.com> 1721943877 -0500	checkout: moving from frontend to release-v1
+7df310271dce615092a3ed689f7ed77116a09f38 7df310271dce615092a3ed689f7ed77116a09f38 programmingsandi <programmingsandi@gmail.com> 1721944067 -0500	checkout: moving from release-v1 to release-v1
+7df310271dce615092a3ed689f7ed77116a09f38 7b6d3fa834d397b5d9f8e15ca23ebb288f27c367 programmingsandi <programmingsandi@gmail.com> 1721944140 -0500	checkout: moving from release-v1 to desarrollo
+7b6d3fa834d397b5d9f8e15ca23ebb288f27c367 fa28d8c5f79bcfcefe3eed90642789af3fac894d programmingsandi <programmingsandi@gmail.com> 1721944141 -0500	merge bd: Fast-forward
+fa28d8c5f79bcfcefe3eed90642789af3fac894d 0f081ac4da80d477e39f5af6e615caf3636667f4 programmingsandi <programmingsandi@gmail.com> 1721944141 -0500	merge backend: Merge made by the 'ort' strategy.
+0f081ac4da80d477e39f5af6e615caf3636667f4 981edf49ead22d7a99a47cac49ae6ef35b87d885 programmingsandi <programmingsandi@gmail.com> 1721944400 -0500	merge frontend: Merge made by the 'ort' strategy.
+981edf49ead22d7a99a47cac49ae6ef35b87d885 c9d1ccee2894d58bfb0dd8f174293304d3311b56 programmingsandi <programmingsandi@gmail.com> 1721944439 -0500	checkout: moving from desarrollo to main
+c9d1ccee2894d58bfb0dd8f174293304d3311b56 39d45fca91465c9e8ad8b45bff4e3b2b007f5f34 programmingsandi <programmingsandi@gmail.com> 1721944439 -0500	merge desarrollo: Merge made by the 'ort' strategy.
+39d45fca91465c9e8ad8b45bff4e3b2b007f5f34 7df310271dce615092a3ed689f7ed77116a09f38 programmingsandi <programmingsandi@gmail.com> 1723147654 -0500	checkout: moving from main to frontend
+7df310271dce615092a3ed689f7ed77116a09f38 b976eb3fcf5595e62eb68c71eb68709b81aee55b programmingsandi <programmingsandi@gmail.com> 1723147680 -0500	checkout: moving from frontend to backend
+b976eb3fcf5595e62eb68c71eb68709b81aee55b fa28d8c5f79bcfcefe3eed90642789af3fac894d programmingsandi <programmingsandi@gmail.com> 1723147686 -0500	checkout: moving from backend to bd
+fa28d8c5f79bcfcefe3eed90642789af3fac894d 7df310271dce615092a3ed689f7ed77116a09f38 programmingsandi <programmingsandi@gmail.com> 1723147887 -0500	checkout: moving from bd to frontend
+7df310271dce615092a3ed689f7ed77116a09f38 b976eb3fcf5595e62eb68c71eb68709b81aee55b programmingsandi <programmingsandi@gmail.com> 1723147969 -0500	checkout: moving from frontend to backend
+b976eb3fcf5595e62eb68c71eb68709b81aee55b 58c0fd8d5130615a5eed0c90c48083c1c545e2ba programmingsandi <programmingsandi@gmail.com> 1723148418 -0500	commit: Guardar cambios en el backend antes de cambiar a la rama bd
+58c0fd8d5130615a5eed0c90c48083c1c545e2ba fa28d8c5f79bcfcefe3eed90642789af3fac894d programmingsandi <programmingsandi@gmail.com> 1723148487 -0500	checkout: moving from backend to bd
+fa28d8c5f79bcfcefe3eed90642789af3fac894d 7df310271dce615092a3ed689f7ed77116a09f38 programmingsandi <programmingsandi@gmail.com> 1723148640 -0500	checkout: moving from bd to frontend

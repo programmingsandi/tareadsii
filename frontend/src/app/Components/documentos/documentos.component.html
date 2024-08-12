@@ -1,0 +1,90 @@
+<header>
+  <nav class="navbar navbar-expand-lg navbar-custom">
+    <div class="container-fluid">
+      <!-- Botón de retorno a Inicio -->
+      <a class="btn btn-outline-light ms-auto regresar-btn" href="/inicio">Regresar a Inicio</a>
+    </div>
+  </nav>
+</header>
+
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-10">
+      <div class="card">
+        <div class="card-header">
+          <h2>Administrar Documentos</h2>
+        </div>
+        <div class="card-body">
+          <form>
+            <div class="form-group">
+              <label for="id_documento">ID Documento:</label>
+              <input type="text" class="form-control" id="id_documento" [(ngModel)]="NuevoDocumento.id_documento" name="id_documento">
+            </div>
+            <div class="form-group">
+              <label for="id_miembro">ID Miembro:</label>
+              <input type="text" class="form-control" id="id_miembro" [(ngModel)]="NuevoDocumento.id_miembro" name="id_miembro">
+            </div>
+            <div class="form-group">
+              <label for="tipo_documento">Tipo de Documento:</label>
+              <input type="text" class="form-control" id="tipo_documento" [(ngModel)]="NuevoDocumento.tipo_documento" name="tipo_documento">
+            </div>
+            <div class="form-group">
+              <label for="documento_url">URL del Documento:</label>
+              <input type="text" class="form-control" id="documento_url" [(ngModel)]="NuevoDocumento.documento_url" name="documento_url">
+            </div>
+            <div class="form-group">
+              <label for="fecha_carga">Fecha de Carga:</label>
+              <input type="date" class="form-control" id="fecha_carga" [(ngModel)]="NuevoDocumento.fecha_carga" name="fecha_carga">
+            </div>
+            <div class="form-group">
+              <label for="estado">Estado:</label>
+              <input type="text" class="form-control" id="estado" [(ngModel)]="NuevoDocumento.estado" name="estado">
+            </div>
+            <div class="text-center mt-4">
+              <button type="button" class="btn btn-primary" (click)="crearDocumento()">Crear Documento</button>
+              <button type="button" class="btn btn-secondary" (click)="actualizarDocumento()">Actualizar Documento</button>
+              <button type="button" class="btn btn-danger" (click)="eliminarDocumento()">Eliminar Documento</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container mt-5">
+  <h2 class="text-center">Listado Total de Documentos</h2>
+  <div class="row justify-content-center">
+    <div class="col-md-10">
+      <div *ngIf="ListaDocumentos.length > 0; else noDocumentos">
+        <table class="table table-striped table-bordered">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>ID Miembro</th>
+              <th>Tipo de Documento</th>
+              <th>URL del Documento</th>
+              <th>Fecha de Carga</th>
+              <th>Estado</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let documento of ListaDocumentos">
+              <td>{{ documento.id_documento }}</td>
+              <td>{{ documento.id_miembro }}</td>
+              <td>{{ documento.tipo_documento }}</td>
+              <td>
+                <a *ngIf="documento.documento_url" [href]="documento.documento_url" target="_blank">Ver Documento</a>
+              </td>
+              <td>{{ documento.fecha_carga | date }}</td>
+              <td>{{ documento.estado }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <ng-template #noDocumentos>
+        <p class="text-center">No hay documentos disponibles.</p>
+      </ng-template>
+    </div>
+  </div>
+</div>

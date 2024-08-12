@@ -1,0 +1,96 @@
+<header>
+  <nav class="navbar navbar-expand-lg navbar-custom">
+    <div class="container-fluid">
+      <!-- Botón de retorno a Inicio -->
+      <a class="btn btn-outline-light ms-auto regresar-btn" href="/inicio">Regresar a Inicio</a>
+    </div>
+  </nav>
+</header>
+
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-10">
+      <div class="card">
+        <div class="card-header">
+          <h2>Administrar Certificados</h2>
+        </div>
+        <div class="card-body">
+          <form>
+            <div class="form-group">
+              <label for="id_certificacion">ID Certificación:</label>
+              <input type="text" class="form-control" id="id_certificacion" [(ngModel)]="NuevaCertificacion.id_certificacion" name="id_certificacion">
+            </div>
+            <div class="form-group">
+              <label for="id_documento">ID Documento:</label>
+              <input type="text" class="form-control" id="id_documento" [(ngModel)]="NuevaCertificacion.id_documento" name="id_documento">
+            </div>
+            <div class="form-group">
+              <label for="tipo_certificacion">Tipo de Certificación:</label>
+              <input type="text" class="form-control" id="tipo_certificacion" [(ngModel)]="NuevaCertificacion.tipo_certificacion" name="tipo_certificacion">
+            </div>
+            <div class="form-group">
+              <label for="fecha_emision">Fecha de Emisión:</label>
+              <input type="date" class="form-control" id="fecha_emision" [(ngModel)]="NuevaCertificacion.fecha_emision" name="fecha_emision">
+            </div>
+            <div class="form-group">
+              <label for="fecha_expiracion">Fecha de Expiración:</label>
+              <input type="date" class="form-control" id="fecha_expiracion" [(ngModel)]="NuevaCertificacion.fecha_expiracion" name="fecha_expiracion">
+            </div>
+            <div class="form-group">
+              <label for="certificado_url">URL del Certificado:</label>
+              <input type="text" class="form-control" id="certificado_url" [(ngModel)]="NuevaCertificacion.certificado_url" name="certificado_url">
+            </div>
+            <div class="form-group">
+              <label for="estado">Estado:</label>
+              <input type="text" class="form-control" id="estado" [(ngModel)]="NuevaCertificacion.estado" name="estado">
+            </div>
+            <div class="text-center mt-4">
+              <button type="button" class="btn btn-primary" (click)="crearCertificacion()">Crear Certificación</button>
+              <button type="button" class="btn btn-secondary" (click)="actualizarCertificacion()">Actualizar Certificación</button>
+              <button type="button" class="btn btn-danger" (click)="eliminarCertificacion()">Eliminar Certificación</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container mt-5">
+  <h2 class="text-center">Listado Total de Certificados</h2>
+  <div class="row justify-content-center">
+    <div class="col-md-10">
+      <div *ngIf="ListaCertificaciones.length > 0; else noCertificaciones">
+        <table class="table table-striped table-bordered">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>ID Documento</th>
+              <th>Tipo de Certificación</th>
+              <th>Fecha de Emisión</th>
+              <th>Fecha de Expiración</th>
+              <th>URL del Certificado</th>
+              <th>Estado</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let certificacion of ListaCertificaciones">
+              <td>{{ certificacion.id_certificacion }}</td>
+              <td>{{ certificacion.id_documento }}</td>
+              <td>{{ certificacion.tipo_certificacion }}</td>
+              <td>{{ certificacion.fecha_emision | date }}</td>
+              <td>{{ certificacion.fecha_expiracion | date }}</td>
+              <td>
+                <a *ngIf="certificacion.certificado_url" [href]="certificacion.certificado_url" target="_blank">Ver Certificado</a>
+              </td>
+              <td>{{ certificacion.estado }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <ng-template #noCertificaciones>
+        <p class="text-center">No hay certificaciones disponibles.</p>
+      </ng-template>
+    </div>
+  </div>
+</div>

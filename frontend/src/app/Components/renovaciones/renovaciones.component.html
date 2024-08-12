@@ -1,0 +1,94 @@
+<header>
+  <nav class="navbar navbar-expand-lg navbar-custom">
+    <div class="container-fluid">
+      <!-- Botón de retorno a Inicio -->
+      <a class="btn btn-outline-light ms-auto regresar-btn" href="/inicio">Regresar a Inicio</a>
+    </div>
+  </nav>
+</header>
+
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-10">
+      <div class="card">
+        <div class="card-header text-white text-center">
+          <h2>Gestionar Renovaciones</h2>
+        </div>
+        <div class="card-body">
+          <form>
+            <div class="form-group">
+              <label for="id_renovacion">Id Renovación:</label>
+              <input type="text" class="form-control" id="id_renovacion" [(ngModel)]="NuevaRenovacion.id_renovacion" name="id_renovacion">
+            </div>
+            <div class="form-group">
+              <label for="id_miembro">Id Miembro:</label>
+              <input type="text" class="form-control" id="id_miembro" [(ngModel)]="NuevaRenovacion.id_miembro" name="id_miembro">
+            </div>
+            <div class="form-group">
+              <label for="id_pago">Id Pago:</label>
+              <input type="text" class="form-control" id="id_pago" [(ngModel)]="NuevaRenovacion.id_pago" name="id_pago">
+            </div>
+            <div class="form-group">
+              <label for="id_documento">Id Documento:</label>
+              <input type="text" class="form-control" id="id_documento" [(ngModel)]="NuevaRenovacion.id_documento" name="id_documento">
+            </div>
+            <div class="form-group">
+              <label for="fecha_solicitud">Fecha de Solicitud:</label>
+              <input type="date" class="form-control" id="fecha_solicitud" [(ngModel)]="NuevaRenovacion.fecha_solicitud" name="fecha_solicitud">
+            </div>
+            <div class="form-group">
+              <label for="fecha_aprobacion">Fecha de Aprobación:</label>
+              <input type="date" class="form-control" id="fecha_aprobacion" [(ngModel)]="NuevaRenovacion.fecha_aprobacion" name="fecha_aprobacion">
+            </div>
+            <div class="form-group">
+              <label for="estado">Estado:</label>
+              <input type="text" class="form-control" id="estado" [(ngModel)]="NuevaRenovacion.estado" name="estado">
+            </div>
+            <div class="text-center mt-3">
+              <button type="button" class="btn btn-primary" (click)="crearRenovacion()">Crear Renovación</button>
+              <button type="button" class="btn btn-secondary" (click)="actualizarRenovacion()">Actualizar Renovación</button>
+              <button type="button" class="btn btn-danger" (click)="eliminarRenovacion()">Eliminar Renovación</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container mt-5">
+  <h2 class="text-center">Listado Total de Renovaciones</h2>
+  <div class="row justify-content-center">
+    <div class="col-md-10">
+      <div *ngIf="ListaRenovaciones.length > 0; else noRenovaciones">
+        <table class="table table-striped table-bordered mt-4">
+          <thead>
+            <tr>
+              <th>ID Renovación</th>
+              <th>ID Miembro</th>
+              <th>ID Pago</th>
+              <th>ID Documento</th>
+              <th>Fecha de Solicitud</th>
+              <th>Fecha de Aprobación</th>
+              <th>Estado</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let renovacion of ListaRenovaciones">
+              <td>{{ renovacion.id_renovacion }}</td>
+              <td>{{ renovacion.id_miembro }}</td>
+              <td>{{ renovacion.id_pago }}</td>
+              <td>{{ renovacion.id_documento }}</td>
+              <td>{{ renovacion.fecha_solicitud | date }}</td>
+              <td>{{ renovacion.fecha_aprobacion | date }}</td>
+              <td>{{ renovacion.estado }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <ng-template #noRenovaciones>
+        <p class="text-center">No hay renovaciones disponibles.</p>
+      </ng-template>
+    </div>
+  </div>
+</div>

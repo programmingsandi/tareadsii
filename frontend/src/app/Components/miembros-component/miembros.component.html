@@ -1,0 +1,146 @@
+<header>
+  <nav class="navbar navbar-expand-lg navbar-custom">
+    <div class="container-fluid">
+      <!-- Botón de retorno a Inicio -->
+      <a class="btn btn-outline-light ms-auto regresar-btn" href="/inicio">Regresar a Inicio</a>
+    </div>
+  </nav>
+</header>
+
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-10">
+      <div class="card">
+        <div class="card-header">
+          <h2>Administrar Miembros</h2>
+        </div>
+        <div class="card-body">
+          <form>
+            <div class="row">
+              <div class="col-md-4">
+                <div class="form-group">
+                  <label for="id_miembro">ID Miembro:</label>
+                  <input type="text" class="form-control" id="id_miembro" [(ngModel)]="NuevoMiembro.id_miembro" name="id_miembro">
+                </div>
+                <div class="form-group">
+                  <label for="nombres">Nombres:</label>
+                  <input type="text" class="form-control" id="nombres" [(ngModel)]="NuevoMiembro.nombres" name="nombres">
+                </div>
+                <div class="form-group">
+                  <label for="apellidos">Apellidos:</label>
+                  <input type="text" class="form-control" id="apellidos" [(ngModel)]="NuevoMiembro.apellidos" name="apellidos">
+                </div>
+                <div class="form-group">
+                  <label for="dni">DNI:</label>
+                  <input type="text" class="form-control" id="dni" [(ngModel)]="NuevoMiembro.dni" name="dni">
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="form-group">
+                  <label for="fecha_nacimiento">Fecha de Nacimiento:</label>
+                  <input type="date" class="form-control" id="fecha_nacimiento" [(ngModel)]="NuevoMiembro.fecha_nacimiento" name="fecha_nacimiento">
+                </div>
+                <div class="form-group">
+                  <label for="direccion">Dirección:</label>
+                  <input type="text" class="form-control" id="direccion" [(ngModel)]="NuevoMiembro.direccion" name="direccion">
+                </div>
+                <div class="form-group">
+                  <label for="email">Email:</label>
+                  <input type="email" class="form-control" id="email" [(ngModel)]="NuevoMiembro.email" name="email">
+                </div>
+                <div class="form-group">
+                  <label for="telefono">Teléfono:</label>
+                  <input type="text" class="form-control" id="telefono" [(ngModel)]="NuevoMiembro.telefono" name="telefono">
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="form-group">
+                  <label for="universidad">Universidad:</label>
+                  <input type="text" class="form-control" id="universidad" [(ngModel)]="NuevoMiembro.universidad" name="universidad">
+                </div>
+                <div class="form-group">
+                  <label for="titulo">Título:</label>
+                  <input type="text" class="form-control" id="titulo" [(ngModel)]="NuevoMiembro.titulo" name="titulo">
+                </div>
+                <div class="form-group">
+                  <label for="fecha_graduacion">Fecha de Graduación:</label>
+                  <input type="date" class="form-control" id="fecha_graduacion" [(ngModel)]="NuevoMiembro.fecha_graduacion" name="fecha_graduacion">
+                </div>
+                <div class="form-group">
+                  <label for="foto_url">Foto URL:</label>
+                  <input type="text" class="form-control" id="foto_url" [(ngModel)]="NuevoMiembro.foto_url" name="foto_url">
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="form-group">
+                  <label for="estado">Estado:</label>
+                  <input type="text" class="form-control" id="estado" [(ngModel)]="NuevoMiembro.estado" name="estado">
+                </div>
+                <div class="form-group">
+                  <label for="fecha_registro">Fecha de Registro:</label>
+                  <input type="date" class="form-control" id="fecha_registro" [(ngModel)]="NuevoMiembro.fecha_registro" name="fecha_registro">
+                </div>
+              </div>
+            </div>
+            <div class="text-center mt-4">
+              <button type="button" class="btn btn-primary" (click)="crearMiembro()">Crear Miembro</button>
+              <button type="button" class="btn btn-secondary" (click)="actualizarMiembro()">Actualizar Miembro</button>
+              <button type="button" class="btn btn-danger" (click)="eliminarMiembro()">Eliminar Miembro</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container mt-5">
+  <h2 class="text-center">Listado Total de Miembros</h2>
+  <div class="row justify-content-center">
+    <div class="col-md-10">
+      <div *ngIf="ListaMiembros.length > 0; else noMiembros">
+        <table class="table table-striped table-bordered">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Nombres</th>
+              <th>Apellidos</th>
+              <th>DNI</th>
+              <th>Email</th>
+              <th>Teléfono</th>
+              <th>Universidad</th>
+              <th>Título</th>
+              <th>Fecha de Graduación</th>
+              <th>Dirección</th>
+              <th>Estado</th>
+              <th>Fecha de Registro</th>
+              <th>Foto</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let miembro of ListaMiembros">
+              <td>{{ miembro.id_miembro }}</td>
+              <td>{{ miembro.nombres }}</td>
+              <td>{{ miembro.apellidos }}</td>
+              <td>{{ miembro.dni }}</td>
+              <td>{{ miembro.email }}</td>
+              <td>{{ miembro.telefono }}</td>
+              <td>{{ miembro.universidad }}</td>
+              <td>{{ miembro.titulo }}</td>
+              <td>{{ miembro.fecha_graduacion | date }}</td>
+              <td>{{ miembro.direccion }}</td>
+              <td>{{ miembro.estado }}</td>
+              <td>{{ miembro.fecha_registro | date }}</td>
+              <td>
+                <img *ngIf="miembro.foto_url" [src]="miembro.foto_url" alt="Foto de {{ miembro.nombres }}" class="img-thumbnail" style="max-width: 50px;">
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <ng-template #noMiembros>
+        <p class="text-center">No hay miembros disponibles.</p>
+      </ng-template>
+    </div>
+  </div>
+</div>
